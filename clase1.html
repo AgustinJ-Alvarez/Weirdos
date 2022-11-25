@@ -12,9 +12,16 @@
     :root {
       --white: #FFFFFF;
       --black: #000000;
-      --very-light-pink: #C7C7C7;
+      --very-light-pink: #9a9898;
       --text-input-field: #F7F7F7;
       --hospital-green: #ACD9B2;
+
+      /* Estilos weirdos */
+      --gradiente : linear-gradient(90deg, rgba(137,137,255,1) 0%, rgba(138,255,222,1) 100%);
+      --amarillo-logo: #d5d93d;
+      --turquesa: #8afede;
+      --violeta: #898aff;
+
       --sm: 14px;
       --md: 16px;
       --lg: 18px;
@@ -39,6 +46,7 @@
       margin-bottom: 48px;
       justify-self: center;
       display: none;
+      border-radius: 50%;
     }
     .title {
       font-size: var(--lg);
@@ -72,7 +80,7 @@
       margin-bottom: 12px;
     }
     .primary-button {
-      background-color: var(--hospital-green);
+      background: var(--amarillo-logo);
       border-radius: 8px;
       border: none;
       color: var(--white);
@@ -96,19 +104,19 @@
 <body>
   <div class="login">
     <div class="form-container">
-      <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+      <img src="logos/weirdos.jpeg" alt="logo" class="logo">
 
       <h1 class="title">Crea una contraseña</h1>
       <p class="subtitle">Ingresa una nueva contraseña para tu cuenta</p>
 
       <form action="/" class="form">
-        <label for="password" class="label">Password</label>
+        <label for="password" class="label">contraseña</label>
         <input type="password" id="password" placeholder="*********" class="input input-password">
 
-        <label for="new-password" class="label">Password</label>
+        <label for="new-password" class="label">Ingresa nuevamente tu contraseña</label>
         <input type="password" id="new-password" placeholder="*********" class="input input-password">
 
-        <input type="submit" value="Confirm" class="primary-button login-button">
+        <input type="submit" value="Confirmar" class="primary-button login-button">
       </form>
     </div>
   </div>
