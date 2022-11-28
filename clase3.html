@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +18,7 @@
       --hospital-green: #ACD9B2;
 
       /* Estilos weirdos */
-      --gradiente : linear-gradient(90deg, rgba(137,137,255,1) 0%, rgba(138,255,222,1) 100%);
+      --gradiente: linear-gradient(90deg, rgba(137, 137, 255, 1) 0%, rgba(138, 255, 222, 1) 100%);
       --amarillo-logo: #d5d93d;
       --turquesa: #8afede;
       --violeta: #898aff;
@@ -26,21 +27,25 @@
       --md: 16px;
       --lg: 18px;
     }
+
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
     }
+
     .login {
       width: 100%;
       height: 100vh;
       display: grid;
       place-items: center;
     }
+
     .form-container {
       display: grid;
       grid-template-rows: auto 1fr auto;
       width: 300px;
     }
+
     .logo {
       width: 150px;
       margin-bottom: 48px;
@@ -48,11 +53,13 @@
       display: none;
       border-radius: 50%;
     }
+
     .title {
       font-size: var(--lg);
       margin-bottom: 12px;
       text-align: center;
     }
+
     .subtitle {
       color: var(--very-light-pink);
       font-size: var(--md);
@@ -61,15 +68,18 @@
       margin-bottom: 32px;
       text-align: center;
     }
+
     .form {
       display: flex;
       flex-direction: column;
     }
+
     .label {
       font-size: var(--sm);
       font-weight: bold;
       margin-bottom: 4px;
     }
+
     .input {
       background-color: var(--text-input-field);
       border: none;
@@ -79,6 +89,7 @@
       padding: 6px;
       margin-bottom: 12px;
     }
+
     .primary-button {
       background: var(--amarillo-logo);
       border-radius: 8px;
@@ -90,12 +101,13 @@
       font-weight: bold;
       height: 50px;
     }
+
     .login-button {
       margin-top: 14px;
       margin-bottom: 30px;
     }
 
-    form a{
+    form a {
       color: var(--amarillo-logo);
       font-size: var(--sm);
       text-align: center;
@@ -113,16 +125,24 @@
       font-size: var(--md);
       font-weight: bold;
       height: 50px;
-      
+
     }
 
     @media (max-width: 640px) {
       .logo {
         display: block;
       }
+
+      .secondary-button {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 24px;
+        width: 300px;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="login">
     <div class="form-container">
@@ -142,4 +162,5 @@
     </div>
   </div>
 </body>
+
 </html>
