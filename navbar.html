@@ -32,39 +32,62 @@
       margin: 0;
       font-family: 'Chivo', sans-serif;
     }
-    nav{
+
+    nav {
       display: flex;
       justify-content: space-between;
       width: 99%;
+      height: 25%;
       padding: 0 24px 0 0;
-      border-bottom: 1px solid var(--very-light-pink);
-      border-bottom: 1px solid var(--very-light-pink);
+      border-bottom: 5px double var(--black);
+      border-left: 5px double var(--black);
+      /* background: rgb(138,255,222);
+      background: linear-gradient(90deg, rgba(138,255,222,1) 0%, rgba(137,137,255,1) 100%); */
+      background: linear-gradient(-45deg, rgba(137, 137, 255, 1), rgba(138, 255, 222, 1),var(--amarillo-logo));
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
     }
+    @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
     .menu {
       display: none;
     }
-    .logo{
+
+    .logo {
       width: 220px;
       height: 6s0px;
     }
+
     .navbar-left {
       display: flex;
     }
-    .navbar-left li:nth-child(1){
+
+    .navbar-left li:nth-child(1) {
       margin-left: 12px;
     }
 
     .navbar-left ul li a,
     .navbar-right ul li a {
       text-decoration: none;
-      color: var(--very-light-pink);
+      color: var(--black);
       border: 1px solid transparent;
       padding: 20px 15px;
       border-radius: 2px;
     }
 
     .navbar-left ul li a:hover,
-    .navbar-right ul li a:hover{
+    .navbar-right ul li a:hover {
       color: var(--white);
       border: 1px solid var(--black);
       background-color: var(--violeta);
@@ -79,46 +102,50 @@
       align-items: center;
       height: 60px;
     }
+
     .navbar-email {
       color: var(--very-light-pink);
       font-size: var(--sm);
       margin-right: 12px;
     }
-    .navbar-right ul li:nth-child(1){
+
+    .navbar-right ul li:nth-child(1) {
       margin-right: 24px;
     }
 
-    .navbar-shopping-cart{
+    .navbar-shopping-cart {
       position: relative
     }
-    .navbar-shopping-cart div{
+
+    .navbar-shopping-cart div {
       width: 16px;
       height: 16px;
       background-color: #8afede;
       border-radius: 50%;
       font-size: var(--sm);
       font-weight: bold;
-      position:absolute;
+      position: absolute;
       top: -6px;
       right: -2px;
-      display:flex;
+      display: flex;
       align-items: center;
       justify-content: center;
     }
 
     @media(max-width:640px) {
-      .menu{
+      .menu {
         display: block;
         margin-right: 12px;
       }
-      .navbar-left ul{
+
+      .navbar-left ul {
         display: none;
       }
-      .navbar-email{
+
+      .navbar-email {
         display: none;
       }
     }
-
   </style>
 </head>
 
@@ -143,12 +170,12 @@
 
     <div class="navbar-right">
       <ul>
-      <li>platzi@example.com</li>
-      <li class="navbar-shopping-cart">
-        <img src="./icons/icon_shopping_cart.svg">
-        <div>2</div>
-      </li>
-    </ul>
+        <li>platzi@example.com</li>
+        <li class="navbar-shopping-cart">
+          <img src="./icons/icon_shopping_cart.svg">
+          <div>2</div>
+        </li>
+      </ul>
     </div>
   </nav>
 </body>
