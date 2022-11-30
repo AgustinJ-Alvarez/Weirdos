@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300&family=Staatliches&display=swap" rel="stylesheet">
+
+  <title>Document</title>
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --black: #000000;
+      --very-light-pink: #9a9898;
+      --text-input-field: #F7F7F7;
+      --hospital-green: #ACD9B2;
+
+      /* Estilos weirdos */
+      --gradiente: linear-gradient(90deg, rgba(137, 137, 255, 1) 0%, rgba(138, 255, 222, 1) 100%);
+      --amarillo-logo: #d5d93d;
+      --turquesa: #8afede;
+      --violeta: #898aff;
+
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Chivo', sans-serif;
+    }
+    .primary-button {
+      background-color: var(--amarillo-logo);
+      border-radius: 8px;
+      border: none;
+      color: var(--black);
+      width: 100%;
+      cursor: pointer;
+      font-size: var(--md);
+      font-weight: bold;
+      height: 50px;
+    }
+    .add-to-cart-button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid transparent;
+    }
+
+    .add-to-cart-button:hover{
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid black;
+    }
+    
+    .product-detail{
+      width: 360px;
+      padding: 24px; 
+      position: absolute;
+      right: 0;
+      border: 2px solid black; 
+      box-sizing: border-box;
+    }
+    .dots {
+        text-align: center;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 8px;
+        width: 8px;
+        margin: 0 2px;
+        background-color: var(--very-light-pink);
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .dots span:nth-child(1) {
+        background-color: var(--violeta);
+    }
+    .primary-button img{
+      height: 32px;
+      width: 32px;
+    }
+
+    .product-detail-close{
+      background: var(--white);
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 8px;
+      left: 10px;
+      z-index: 2;
+      padding: 12px;
+      border-radius: 2px;
+      border: 2px solid transparent;
+    }
+
+    .product-detail-close:hover {
+      cursor: pointer;
+      border-color: tomato;
+    }
+
+    .product-detail > img:nth-child(2) {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+    .product-info p:nth-child(1) {
+      font-weight: bold;
+      font-size: var(--lg);
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+    .product-info p:nth-child(2) {
+      color: var(--very-light-pink);
+      font-size: var(--md);
+      margin-top: 0;
+      margin-bottom: 36px;
+    }
+    .product-info p:nth-child(3) {
+      color: var(--very-light-pink);
+      font-size: var(--sm);
+      margin-top: 0;
+      margin-bottom: 36px;
+    }
+    @media (max-width: 640px) {
+      .product-detail {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <aside class="product-detail">
+    <div class="product-detail-close">
+      <img src="./icons/icon_close.png">
+    </div>
+    <img src="./cards/poison.jpeg">
+    <div class="dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+</div>
+    <div class="product-info">
+      <p>3500 $</p>
+      <p>Remera poison</p>
+      <p>Una reme full veraniega y galactica.Casual y venenosa. Que esperas para ponertela?</p>
+    </div>
+    <button class="primary-button add-to-cart-button">
+      <img src="./icons/add_shopping_cart.svg">
+      Añadir al carrito
+    </button>
+  </aside>
+</body>
+
+</html>
