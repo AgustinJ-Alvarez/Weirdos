@@ -36,28 +36,30 @@
     nav {
       display: flex;
       justify-content: space-between;
-      width: 99.5%;
+      width: 97,5%;
       height: 25%;
-      padding: 0 24px 0 0;
+      padding: 0 24px;
       border-bottom: 8px double var(--black);
       border-left: 8px double var(--black);
-      /* background: rgb(138,255,222);
-      background: linear-gradient(90deg, rgba(138,255,222,1) 0%, rgba(137,137,255,1) 100%); */
-      background: linear-gradient(-45deg, rgba(137, 137, 255, 1), rgba(138, 255, 222, 1),var(--amarillo-logo));
+      border-right: 8px double var(--black);
+      background: linear-gradient(-45deg, rgba(137, 137, 255, 1), rgba(138, 255, 222, 1), var(--amarillo-logo));
       background-size: 400% 400%;
       animation: gradient 15s ease infinite;
     }
+
     @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
 
     .menu {
@@ -104,7 +106,7 @@
     }
 
     .navbar-email {
-      color: var(--very-light-pink);
+      color: var(--black);
       font-size: var(--sm);
       margin-right: 12px;
     }
@@ -120,22 +122,26 @@
     .navbar-shopping-cart div {
       width: 16px;
       height: 16px;
-      background-color: #8afede;
+      background-color: var(--turquesa);
       border-radius: 50%;
       font-size: var(--sm);
       font-weight: bold;
       position: absolute;
       top: -6px;
-      right: -2px;
+      right: -3px;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
     }
+    .navbar-email img{
+    margin-left: 10px;
+    transform: rotate(90deg);
+}
 
     @media(max-width:640px) {
       .menu {
         display: block;
-        margin-right: 12px;
+        
       }
 
       .navbar-left ul {
@@ -145,6 +151,7 @@
       .navbar-email {
         display: none;
       }
+
     }
   </style>
 </head>
@@ -170,7 +177,10 @@
 
     <div class="navbar-right">
       <ul>
-        <li>platzi@example.com</li>
+        <li class="navbar-email">platzi@example.com
+          <img src="./icons/flechita.svg" alt="">
+        </li>
+
         <li class="navbar-shopping-cart">
           <img src="./icons/icon_shopping_cart.svg">
           <div>2</div>
