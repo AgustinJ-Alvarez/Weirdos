@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +17,7 @@
       --hospital-green: #ACD9B2;
 
       /* Estilos weirdos */
-      --gradiente: linear-gradient(90deg, rgba(137, 137, 255, 1) 0%, rgba(138, 255, 222, 1) 100%);
+      --gradiente : linear-gradient(90deg, rgba(137,137,255,1) 0%, rgba(138,255,222,1) 100%);
       --amarillo-logo: #d5d93d;
       --turquesa: #8afede;
       --violeta: #898aff;
@@ -27,25 +26,24 @@
       --md: 16px;
       --lg: 18px;
     }
-
     body {
       margin: 0;
       font-family: 'Chivo', sans-serif;
     }
-
     .login {
       width: 100%;
       height: 100vh;
       display: grid;
       place-items: center;
+   
     }
-
     .form-container {
       display: grid;
       grid-template-rows: auto 1fr auto;
       width: 300px;
+      border: 8px double black;
+      padding: 24px;
     }
-
     .logo {
       width: 150px;
       margin-bottom: 48px;
@@ -53,13 +51,11 @@
       display: none;
       border-radius: 50%;
     }
-
     .title {
       font-size: var(--lg);
       margin-bottom: 12px;
       text-align: center;
     }
-
     .subtitle {
       color: var(--very-light-pink);
       font-size: var(--md);
@@ -68,18 +64,15 @@
       margin-bottom: 32px;
       text-align: center;
     }
-
     .form {
       display: flex;
       flex-direction: column;
     }
-
     .label {
       font-size: var(--sm);
       font-weight: bold;
       margin-bottom: 4px;
     }
-
     .input {
       background-color: var(--text-input-field);
       border: none;
@@ -89,78 +82,53 @@
       padding: 6px;
       margin-bottom: 12px;
     }
-
     .primary-button {
       background: var(--amarillo-logo);
       border-radius: 8px;
       border: none;
-      color: var(--white);
+      color: var(--black);
       width: 100%;
       cursor: pointer;
       font-size: var(--md);
       font-weight: bold;
       height: 50px;
     }
-
+    .primary-button:hover{
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid black;
+    }
     .login-button {
       margin-top: 14px;
       margin-bottom: 30px;
     }
-
-    form a {
-      color: var(--amarillo-logo);
-      font-size: var(--sm);
-      text-align: center;
-      text-decoration: none;
-      margin-bottom: 52px;
-    }
-
-    .secondary-button {
-      background: var(--white);
-      border-radius: 8px;
-      border: 1px solid var(--amarillo-logo);
-      color: var(--amarillo-logo);
-      width: 100%;
-      cursor: pointer;
-      font-size: var(--md);
-      font-weight: bold;
-      height: 50px;
-
-    }
-
     @media (max-width: 640px) {
       .logo {
         display: block;
       }
-
-      .secondary-button {
-        position: absolute;
-        bottom: 0;
-        margin-bottom: 24px;
-        width: 300px;
-      }
     }
   </style>
 </head>
-
 <body>
   <div class="login">
     <div class="form-container">
       <img src="logos/weirdos.jpeg" alt="logo" class="logo">
 
-      <form action="/" class="form">
-        <label for="email" class="label">Email address</label>
-        <input type="password" id="email" placeholder="email@example.com" class="input input-email">
+      <h1 class="title">Crea una contraseña</h1>
+      <p class="subtitle">Ingresa una nueva contraseña para tu cuenta</p>
 
-        <label for="new-password" class="label">Ingresa tu contraseña</label>
+      <form action="/" class="form">
+        <label for="password" class="label">contraseña</label>
+        <input type="password" id="password" placeholder="*********" class="input input-password">
+
+        <label for="new-password" class="label">Ingresa nuevamente tu contraseña</label>
         <input type="password" id="new-password" placeholder="*********" class="input input-password">
 
-        <input type="submit" value="Iniciar sesión" class="primary-button login-button">
-        <a href="/"> Olvidaste tu contraseña?</a>
+        <input type="submit" value="Confirmar" class="primary-button login-button">
       </form>
-      <button class="secondary-button signup-button">Registrarse</button>
     </div>
   </div>
 </body>
-
 </html>

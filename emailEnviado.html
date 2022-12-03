@@ -35,6 +35,8 @@
       grid-template-rows: auto 1fr auto;
       width: 300px;
       justify-items: center;
+      border: 8px double black;
+      padding: 24px;
     }
     .logo {
       width: 150px;
@@ -83,13 +85,19 @@
       background-color: var(--amarillo-logo);
       border-radius: 8px;
       border: none;
-      color: var(--white);
+      color: var(--black);
       width: 100%;
       cursor: pointer;
       font-size: var(--md);
       font-weight: bold;
       height: 50px;
+      border: 2px solid transparent;
     }
+
+    .primary-button:hover{
+      border: 2px solid var(--black);
+    }
+
     .login-button {
       margin-top: 14px;
       margin-bottom: 30px;
@@ -106,8 +114,8 @@
     <div class="form-container">
       <img src="./logos/weirdos.jpeg" alt="logo" class="logo">
 
-      <h1 class="title">Email has been sent!</h1>
-      <p class="subtitle">Please check your inbox for instructions on how to reset the password</p>
+      <h1 class="title">Un email ha sido enviado a tu cuenta!</h1>
+      <p class="subtitle">Comprueba your bandeja de entrada para leer las instrucciones sobre como reiniciar tu constraseña</p>
 
       <div class="email-image">
         <img src="./icons/email.svg" alt="email">
