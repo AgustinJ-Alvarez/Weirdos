@@ -59,7 +59,7 @@
       border: 2px solid black;
     }
     
-    .product-detail{
+    .detail{
       width: 360px;
       padding: 24px; 
       position: absolute;
@@ -89,7 +89,7 @@
       width: 32px;
     }
 
-    .product-detail-close{
+    .detail-close{
       background: var(--white);
       width: 8px;
       height: 8px;
@@ -101,42 +101,42 @@
       border-radius: 2px;
       border: 2px solid transparent;
     }
-    .product-detail-close img{
+    .detail-close img{
       position: absolute;
       top: 9px;
       right: 9px;
     }
-    .product-detail-close:hover {
+    .detail-close:hover {
       cursor: pointer;
       border:2px solid tomato;
     }
 
-    .product-detail > img:nth-child(2) {
+    .detail > img:nth-child(2) {
       width: 100%;
       height: 360px;
       object-fit: cover;
       border-radius: 2px;
     }
-    .product-info p:nth-child(1) {
+    .product-info2 p:nth-child(1) {
       font-weight: bold;
       font-size: var(--lg);
       margin-top: 4px;
       margin-bottom: 4px;
     }
-    .product-info p:nth-child(2) {
+    .product-info2 p:nth-child(2) {
       color: var(--very-light-pink);
       font-size: var(--md);
       margin-top: 0;
       margin-bottom: 36px;
     }
-    .product-info p:nth-child(3) {
+    .product-info2 p:nth-child(3) {
       color: var(--very-light-pink);
       font-size: var(--sm);
       margin-top: 0;
       margin-bottom: 36px;
     }
     @media (max-width: 640px) {
-      .product-detail {
+      .detail {
         width: 100%;
       }
     }
@@ -144,8 +144,8 @@
 </head>
 
 <body>
-  <aside class="product-detail">
-    <div class="product-detail-close">
+  <aside class="detail">
+    <div class="detail-close">
       <img src="./icons/icon_close.png">
     </div>
     <img src="./cards/poison.jpeg">
@@ -154,7 +154,7 @@
       <span class="dot"></span>
       <span class="dot"></span>
 </div>
-    <div class="product-info">
+    <div class="product-info2">
       <p>3500 $</p>
       <p>Remera poison</p>
       <p>Una reme full veraniega y galactica.Casual y venenosa. Que esperas para ponertela?</p>

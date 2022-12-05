@@ -141,7 +141,7 @@
     background: var(--white);
     top: 48px;
     right: 80px;
-    z-index: 10;
+    z-index: 50;
 }
 
 .desktop-menu ul {
@@ -363,6 +363,112 @@
 }
 
 
+/* Detalle del producto */
+.primary-button {
+  background-color: var(--amarillo-logo);
+  border-radius: 8px;
+  border: none;
+  color: var(--black);
+  width: 100%;
+  cursor: pointer;
+  font-size: var(--md);
+  font-weight: bold;
+  height: 50px;
+}
+.add-to-cart-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+}
+
+.add-to-cart-button:hover{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+
+.detail{
+  width: 360px; 
+  position: absolute;
+  right: 0;
+  top: 60px;
+  border: 10px double black; 
+  box-sizing: border-box;
+  background: var(--white);
+  padding: 24px;
+}
+.dots {
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    background-color: var(--very-light-pink);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dots span:nth-child(1) {
+    background-color: var(--violeta);
+}
+.primary-button img{
+  height: 32px;
+  width: 32px;
+}
+
+.detail-close{
+  background: var(--white);
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  z-index: 2;
+  padding: 12px;
+  border-radius: 2px;
+  border: 2px solid transparent;
+}
+.detail-close img{
+  position: absolute;
+  top: 9px;
+  right: 9px;
+}
+.detail-close:hover {
+  cursor: pointer;
+  border:2px solid tomato;
+}
+
+.detail > img:nth-child(2) {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+.product-info2 p:nth-child(1) {
+  font-weight: bold;
+  font-size: var(--lg);
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.product-info2 p:nth-child(2) {
+  color: var(--very-light-pink);
+  font-size: var(--md);
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+.product-info2 p:nth-child(3) {
+  color: var(--very-light-pink);
+  font-size: var(--sm);
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+
 
 /* Media querys */
 
@@ -399,6 +505,10 @@
   .product-card img {
     width: 100%;
     height: 140px;
+  }
+
+  .detail {
+    width: 100%;
   }
 }
 
